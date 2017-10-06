@@ -1,0 +1,9 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# A basic healthcheck endpoint
+GET     /play-microservice/healthcheck                         @application.HealthcheckController.available
+
+# Map static assets from the /public directory to the /resources URL path
+GET     /play-microservice/resources/*file                     controllers.Assets.at(path="/public", file)
